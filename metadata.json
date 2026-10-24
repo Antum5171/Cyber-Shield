@@ -1,0 +1,8 @@
+{
+  "name": "Cyber Shield",
+  "description": "Cyber Shield is an interactive, responsive cybersecurity educational platform featuring threat intelligence, interactive learning labs, phishing simulator, password hygiene tool, and knowledge quizzes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

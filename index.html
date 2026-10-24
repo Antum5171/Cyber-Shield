@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Shield — Cybersecurity Awareness &amp; Education Platform</title>
+  <meta name="description" content="Defend your digital life with Cyber Shield: open-access cybersecurity education, interactive threat simulators, password entropy analyzer, and defense quizzes." />
+  <meta property="og:title" content="Cyber Shield — Cybersecurity Awareness &amp; Education Platform" />
+  <meta property="og:description" content="Free, accessible cybersecurity education with interactive labs, threat intelligence, and defense quizzes." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Inter & Roboto Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Free CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- Sticky Top Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo / Wordmark -->
+      <a href="#home" class="brand" data-tab="home" aria-label="Cyber Shield Home">
+        <div class="brand-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div class="brand-text">Cyber<span>Shield</span></div>
+      </a>
+
+      <!-- 5-Tab Navigation -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <button type="button" class="nav-link active" data-tab="home">
+          <i class="fa-solid fa-house"></i> Home
+        </button>
+        <button type="button" class="nav-link" data-tab="about">
+          <i class="fa-solid fa-users"></i> About
+        </button>
+        <button type="button" class="nav-link" data-tab="services">
+          <i class="fa-solid fa-graduation-cap"></i> Services
+        </button>
+        <button type="button" class="nav-link" data-tab="quizzes">
+          <i class="fa-solid fa-list-check"></i> Quizzes
+        </button>
+        <button type="button" class="nav-link" data-tab="contact">
+          <i class="fa-solid fa-paper-plane"></i> Contact
+        </button>
+      </nav>
+
+      <!-- Action & Mobile Toggle -->
+      <div class="header-actions">
+        <button type="button" class="btn btn-primary btn-sm" id="navCtaBtn" data-tab="services">
+          <i class="fa-solid fa-bolt"></i> Learning Hub
+        </button>
+        <button type="button" class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container for Tab Views -->
+  <main id="appContent">
+
+    <!-- ======================================================================
+         TAB 1: HOME (Landing Page)
+         ====================================================================== -->
+    <section id="home-tab" class="tab-content active" role="tabpanel" aria-labelledby="tab-home">
+      
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-text-col">
+            <span class="section-kicker">Interactive Cyber Education</span>
+            <h1 class="hero-headline">
+              Defend Your <span class="gradient-text">Digital Life</span>
+            </h1>
+            <p class="hero-subhead">
+              Cyber Shield empowers everyday internet users, families, and organizations with the practical skills needed to recognize deceptive scams, neutralize malware vectors, and safeguard sensitive data.
+            </p>
+
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary" data-tab="services">
+                <i class="fa-solid fa-book-open-reader"></i> Start Learning
+              </button>
+              <button type="button" class="btn btn-secondary" data-tab="quizzes">
+                <i class="fa-solid fa-vial-circle-check"></i> Test Your Knowledge
+              </button>
+            </div>
+
+            <div class="hero-metadata">
+              <span>Open Educational License</span>
+              <span class="sep">·</span>
+              <span>No Registration Required</span>
+              <span class="sep">·</span>
+              <span>Updated For 2026 Threat Vectors</span>
+            </div>
+          </div>
+
+          <!-- Interactive Holographic Cyber Stage Canvas -->
+          <div class="hero-visual-card">
+            <div class="visual-screen-header">
+              <div class="visual-dots">
+                <span class="visual-dot"></span>
+                <span class="visual-dot"></span>
+                <span class="visual-dot"></span>
+              </div>
+              <div class="visual-title">DEFENSE_MATRIX // LIVE SIMULATION</div>
+            </div>
+
+            <div class="visual-canvas-container">
+              <canvas id="cyberMatrixCanvas" width="460" height="270" aria-label="Interactive cybersecurity defense perimeter animation"></canvas>
+            </div>
+
+            <div class="visual-overlay-stats">
+              <div class="visual-stat-item">
+                <span class="stat-label">Encryption</span>
+                <span class="stat-val">AES-256</span>
+              </div>
+              <div class="visual-stat-item">
+                <span class="stat-label">Zero-Trust</span>
+                <span class="stat-val">Active</span>
+              </div>
+              <div class="visual-stat-item">
+                <span class="stat-label">Heuristics</span>
+                <span class="stat-val">Nominal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quantitative Proof Strip -->
+      <section class="container">
+        <div class="metrics-strip">
+          <div class="metric-cell">
+            <div class="metric-number cyan tabular-nums">3.4B+</div>
+            <div class="metric-title">Daily Phishing Emails</div>
+            <div class="metric-sub">Circulating globally across personal &amp; work inboxes</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-number emerald tabular-nums">95%</div>
+            <div class="metric-title">Human Error Factor</div>
+            <div class="metric-sub">Breaches preventable through basic security hygiene</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-number amber tabular-nums">21 Days</div>
+            <div class="metric-title">Avg. Ransomware Downtime</div>
+            <div class="metric-sub">Total operational freeze per infected institution</div>
+          </div>
+          <div class="metric-cell">
+            <div class="metric-number tabular-nums">100%</div>
+            <div class="metric-title">Open-Access Education</div>
+            <div class="metric-sub">Free modules, simulations &amp; self-evaluations</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Security Topics Grid -->
+      <section class="threats-section">
+        <div class="container">
+          <div class="section-intro">
+            <span class="section-kicker">High-Priority Vulnerabilities</span>
+            <h2 class="section-title">Today's Biggest Cyber Threats</h2>
+            <p class="section-desc">
+              Modern adversaries exploit psychological cognitive blind spots and system misconfigurations before attempting brute force. Understand how these vectors work.
+            </p>
+          </div>
+
+          <div class="threat-cards-grid">
+            <!-- Threat Card 1: Social Engineering -->
+            <article class="threat-card cyan-edge">
+              <div class="threat-icon-box">
+                <i class="fa-solid fa-user-secret"></i>
+              </div>
+              <h3 class="threat-title">Social Engineering</h3>
+              <p class="threat-desc">
+                Manipulative deception techniques—including spear phishing, impersonation calls, and pretexting—designed to induce victims into divulging credentials or granting unauthorized system access.
+              </p>
+              <div class="threat-footer">
+                <span class="threat-impact">Vector: Cognitive Bias</span>
+                <button type="button" class="threat-action-link" data-tab="services" data-accordion="module-phishing">
+                  Explore Defense <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Threat Card 2: Ransomware -->
+            <article class="threat-card emerald-edge">
+              <div class="threat-icon-box">
+                <i class="fa-solid fa-lock"></i>
+              </div>
+              <h3 class="threat-title">Ransomware Extortion</h3>
+              <p class="threat-desc">
+                Malicious payloads that silently encrypt personal photos, documents, and corporate servers. Attackers demand cryptocurrency payments while exfiltrating private files for secondary blackmail.
+              </p>
+              <div class="threat-footer">
+                <span class="threat-impact">Vector: Malicious Payloads</span>
+                <button type="button" class="threat-action-link" data-tab="services" data-accordion="module-browsing">
+                  Explore Defense <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- Threat Card 3: Zero-Day Exploits -->
+            <article class="threat-card amber-edge">
+              <div class="threat-icon-box">
+                <i class="fa-solid fa-bug"></i>
+              </div>
+              <h3 class="threat-title">Zero-Day Exploits</h3>
+              <p class="threat-desc">
+                Previously undisclosed hardware or software vulnerabilities weaponized by threat actors before software vendors become aware or release protective security patches.
+              </p>
+              <div class="threat-footer">
+                <span class="threat-impact">Vector: Unpatched Firmware</span>
+                <button type="button" class="threat-action-link" data-tab="services" data-accordion="module-password">
+                  Explore Defense <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Live Threat Intel Advisory Banner -->
+          <div class="intel-brief-box">
+            <div class="intel-text">
+              <span class="intel-tag"><i class="fa-solid fa-bullhorn"></i> Global Threat Advisory</span>
+              <span class="intel-headline">Surge in AI-generated voice cloning &amp; lookalike authentication prompts detected.</span>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" data-tab="services">
+              Read Countermeasures <i class="fa-solid fa-shield"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ======================================================================
+         TAB 2: ABOUT ("The Cyber Shield Team")
+         ====================================================================== -->
+    <section id="about-tab" class="tab-content" role="tabpanel" aria-labelledby="tab-about">
+      <div class="container about-section">
+        
+        <div class="section-intro">
+          <span class="section-kicker">Our Purpose &amp; People</span>
+          <h2 class="section-title">The Cyber Shield Team</h2>
+          <p class="section-desc">
+            We are security engineers, educators, researchers, and designers committed to leveling the playing field against digital crime.
+          </p>
+        </div>
+
+        <!-- Prominent Mission Statement Callout Box -->
+        <div class="mission-callout">
+          <div class="mission-header">
+            <span class="mission-badge"><i class="fa-solid fa-bullseye"></i> Core Mission</span>
+          </div>
+          <blockquote class="mission-quote">
+            "To dismantle the barrier of technical jargon and make robust cybersecurity awareness, practical defensive habits, and emergency response tools accessible and completely free for every internet user."
+          </blockquote>
+          <p class="mission-desc">
+            Cyber threats are no longer confined to corporate server rooms. Today, everyday individuals, elders, students, and small community teams face sophisticated automated intrusion attempts and deceptive social engineering daily. We created Cyber Shield as a public-interest initiative to replace fear and confusion with clear, actionable resilience.
+          </p>
+        </div>
+
+        <!-- Project Background & 4 Pillars -->
+        <div class="about-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-number tabular-nums">01</div>
+            <h3 class="pillar-title">Democratized Access</h3>
+            <p class="pillar-desc">No paywalls, subscriptions, or vendor lock-in. Essential security literacy belongs in the public commons.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-number tabular-nums">02</div>
+            <h3 class="pillar-title">Active Learning</h3>
+            <p class="pillar-desc">Theory is easily forgotten. Interactive simulators for password entropy and email inspection foster lasting muscle memory.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-number tabular-nums">03</div>
+            <h3 class="pillar-title">Privacy by Default</h3>
+            <p class="pillar-desc">All client-side analysis (such as password entropy checking) runs locally in your browser. No keystrokes are transmitted.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-number tabular-nums">04</div>
+            <h3 class="pillar-title">Actionable Defense</h3>
+            <p class="pillar-desc">We emphasize concrete, everyday habits—like passphrases and hardware MFA keys—over paralyzing complexity.</p>
+          </div>
+        </div>
+
+        <!-- 5-Card Team Profile Grid -->
+        <div class="section-intro" style="margin-bottom: 2rem;">
+          <span class="section-kicker">Leadership &amp; Research</span>
+          <h3 class="section-title" style="font-size: 1.85rem;">Founding Team</h3>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1: John Rain Muñoz -->
+          <article class="team-card">
+            <div class="team-avatar-wrapper">
+              <div class="team-avatar-inner">
+                <i class="fa-solid fa-code"></i>
+              </div>
+            </div>
+            <h4 class="team-name">John Rain Muñoz</h4>
+            <div class="team-role">Project Lead &amp; AI Quizzes Developer</div>
+            <p class="team-bio">
+              Spearheaded the Cyber Shield platform and engineered the core single-page navigation system. Developed the Quizzes tab and integrated the Gemini AI assessment engine to deliver interactive tests and personalized study suggestions.
+            </p>
+            <div class="team-links">
+              <a href="#" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Portfolio"><i class="fa-solid fa-laptop-code"></i></a>
+            </div>
+          </article>
+
+          <!-- Member 2: Darren Nicdao -->
+          <article class="team-card">
+            <div class="team-avatar-wrapper">
+              <div class="team-avatar-inner">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+            </div>
+            <h4 class="team-name">Darren Nicdao</h4>
+            <div class="team-role">Landing Page &amp; UI/UX Developer</div>
+            <p class="team-bio">
+              Designed and built the main Home landing page, hero banner, and Featured Security Topics showcase. Crafted the dark-mode visual aesthetic to hook visitors and introduce them to Cyber Shield's core mission.
+            </p>
+            <div class="team-links">
+              <a href="#" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Dribbble Profile"><i class="fa-brands fa-dribbble"></i></a>
+            </div>
+          </article>
+
+          <!-- Member 3: Jimar Bartolome -->
+          <article class="team-card">
+            <div class="team-avatar-wrapper">
+              <div class="team-avatar-inner">
+                <i class="fa-solid fa-users"></i>
+              </div>
+            </div>
+            <h4 class="team-name">Jimar Bartolome</h4>
+            <div class="team-role">About Page &amp; Team Profile Developer</div>
+            <p class="team-bio">
+              Architected the About tab, structuring the Cyber Shield mission statement, project background, and the interactive 5-member team showcase. Focused on presenting the team's vision with clean, responsive layouts.
+            </p>
+            <div class="team-links">
+              <a href="#" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Portfolio"><i class="fa-solid fa-address-card"></i></a>
+            </div>
+          </article>
+
+          <!-- Member 4: Cris Deniel Valenzuela -->
+          <article class="team-card">
+            <div class="team-avatar-wrapper">
+              <div class="team-avatar-inner">
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+            </div>
+            <h4 class="team-name">Cris Deniel Valenzuela</h4>
+            <div class="team-role">Learning Modules &amp; Services Developer</div>
+            <p class="team-bio">
+              Built the Services tab housing the Core Learning Hub. Authored and formatted the interactive educational guides covering Phishing Awareness, Password Hygiene, and Safe Browsing practices.
+            </p>
+            <div class="team-links">
+              <a href="#" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Guides"><i class="fa-solid fa-newspaper"></i></a>
+            </div>
+          </article>
+
+          <!-- Member 5: John Lester Baduya -->
+          <article class="team-card">
+            <div class="team-avatar-wrapper">
+              <div class="team-avatar-inner">
+                <i class="fa-solid fa-paper-plane"></i>
+              </div>
+            </div>
+            <h4 class="team-name">John Lester Baduya</h4>
+            <div class="team-role">Contact Systems &amp; Form Developer</div>
+            <p class="team-bio">
+              Developed the Contact tab and user inquiry interface. Implemented client-side JavaScript form validation, dropdown routing, and interactive submission feedback so users can easily reach the Cyber Shield team.
+            </p>
+            <div class="team-links">
+              <a href="#" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Feedback System"><i class="fa-solid fa-shield"></i></a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 3: SERVICES (Core Learning Hub)
+         ====================================================================== -->
+    <section id="services-tab" class="tab-content" role="tabpanel" aria-labelledby="tab-services">
+      <div class="container services-section">
+        
+        <div class="section-intro">
+          <span class="section-kicker">Interactive Knowledge Hub</span>
+          <h2 class="section-title">Core Defensive Pillars</h2>
+          <p class="section-desc">
+            Explore comprehensive guides and interactive simulation sandboxes designed to transform security theory into everyday habits.
+          </p>
+        </div>
+
+        <!-- Learning Hub Control Bar (Search, Progress, Filter) -->
+        <div class="learning-hub-bar">
+          <div class="hub-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="moduleSearchInput" placeholder="Filter topics (e.g. MFA, spoofing, VPN, entropy)..." aria-label="Search learning modules">
+          </div>
+          <div class="hub-progress-tracker">
+            <div class="hub-progress-info">
+              Completion: <strong id="modulesCompletedText">0 of 3</strong>
+            </div>
+            <div class="hub-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              <div class="hub-progress-fill" id="hubProgressFill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expandable Modules Accordion -->
+        <div class="modules-accordion" id="modulesAccordion">
+
+          <!-- -------------------------------------------------------------
+               PILLAR 1: Phishing Awareness
+               ------------------------------------------------------------- -->
+          <article class="accordion-item open" id="module-phishing">
+            <button type="button" class="accordion-header" aria-expanded="true" aria-controls="body-phishing">
+              <div class="accordion-title-wrap">
+                <div class="accordion-icon-badge">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="accordion-text">
+                  <h3>Pillar 1: Phishing &amp; Deception Awareness</h3>
+                  <div class="accordion-metadata">
+                    <span>Email &amp; Messaging Spoofing</span>
+                    <span>·</span>
+                    <span>10 Min Practical Guide</span>
+                    <span>·</span>
+                    <span>Interactive Email Scanner</span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-controls">
+                <button type="button" class="complete-checkbox-btn" data-module-id="1">
+                  <i class="fa-regular fa-circle-check"></i> Mark Completed
+                </button>
+                <i class="fa-solid fa-chevron-down accordion-chevron"></i>
+              </div>
+            </button>
+
+            <div class="accordion-body" id="body-phishing">
+              <div class="module-content-grid">
+                
+                <!-- Educational Text & Defense Rules -->
+                <div class="module-guide-content">
+                  <h4>How Modern Phishing Infiltrates Inboxes</h4>
+                  <p>
+                    Phishing has evolved far beyond obvious Nigerian prince hoaxes. Today's attacks feature weaponized lookalike domains (e.g., <code>micros0ft-security.com</code>), stolen company branding, and psychological urgency triggers that bypass rational skepticism.
+                  </p>
+
+                  <ul class="defense-checklist">
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Inspect the Full Sender Address:</strong> Display names can be set to anything. Always expand the header to check the actual sending domain after the <code>@</code> sign.</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Beware Manufactured Urgency:</strong> Threat actors create artificial deadlines ("Account suspended in 2 hours") to cause panic before you verify.</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Hover Before Clicking:</strong> On desktop, hover over links to preview their destination URL in the status bar. On mobile, long-press to view preview.</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Out-of-Band Verification:</strong> If your bank, colleague, or CEO requests an urgent transfer or password reset, contact them directly via known official numbers.</span>
+                    </li>
+                  </ul>
+
+                  <div style="margin-top: 1.25rem;">
+                    <button type="button" class="btn btn-secondary btn-sm" data-tab="quizzes" data-quiz-module="phishing">
+                      <i class="fa-solid fa-vial-circle-check"></i> Practice Phishing Quiz
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Interactive Phishing Email Simulator -->
+                <div class="interactive-tool-pane">
+                  <div class="tool-header">
+                    <span class="tool-title"><i class="fa-solid fa-crosshairs"></i> Interactive Email Threat Lab</span>
+                    <span style="font-size: 0.75rem; color: var(--text-dim);">Click suspicious red flags</span>
+                  </div>
+
+                  <div class="phishing-sim-box">
+                    <div class="sim-email-head">
+                      <div class="sim-email-row">
+                        <span class="sim-email-label">From:</span>
+                        <span class="sim-email-val" id="simFromField" title="Click to inspect address">IT Support Desk &lt;support@corprate-update-portal.org&gt;</span>
+                      </div>
+                      <div class="sim-email-row">
+                        <span class="sim-email-label">Subject:</span>
+                        <span style="color: #ffffff;">[CRITICAL ACTION REQUIRED] Security Certificate Expiration</span>
+                      </div>
+                    </div>
+
+                    <div class="sim-email-body">
+                      <div class="urgent-banner" id="simUrgentBanner" title="Click to evaluate urgency">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Immediate action required: Your credentials will be permanently deactivated within 45 minutes unless re-validated.
+                      </div>
+                      <p>Dear Valued Colleague,</p>
+                      <p style="margin: 0.5rem 0;">
+                        Our core systems are migrating to enhanced security protocols. To retain access to your corporate inbox and salary portal, please authenticate below immediately:
+                      </p>
+                      <div>
+                        <span class="suspicious-link" id="simLinkField" title="Click to inspect URL">
+                          https://secure-login.corprate-update-portal.org/auth/token?id=8923
+                        </span>
+                      </div>
+                      <p style="font-size: 0.775rem; color: var(--text-dim); margin-top: 0.75rem;">
+                        Attachment: <span class="sim-email-val" id="simAttachField"><i class="fa-solid fa-file-zipper"></i> employee_patch_v2.exe</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="phishing-feedback-box" id="phishingFeedbackBox">
+                    Click any highlighted element in the simulated email above (Sender address, Urgency banner, Link, or Attachment) to inspect its threat indicator.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- -------------------------------------------------------------
+               PILLAR 2: Password Hygiene & Multi-Factor Auth
+               ------------------------------------------------------------- -->
+          <article class="accordion-item" id="module-password">
+            <button type="button" class="accordion-header" aria-expanded="false" aria-controls="body-password">
+              <div class="accordion-title-wrap">
+                <div class="accordion-icon-badge">
+                  <i class="fa-solid fa-key"></i>
+                </div>
+                <div class="accordion-text">
+                  <h3>Pillar 2: Password Hygiene &amp; MFA Architectures</h3>
+                  <div class="accordion-metadata">
+                    <span>Entropy, Passphrases &amp; FIDO2</span>
+                    <span>·</span>
+                    <span>8 Min Practical Guide</span>
+                    <span>·</span>
+                    <span>Live Entropy Calculator</span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-controls">
+                <button type="button" class="complete-checkbox-btn" data-module-id="2">
+                  <i class="fa-regular fa-circle-check"></i> Mark Completed
+                </button>
+                <i class="fa-solid fa-chevron-down accordion-chevron"></i>
+              </div>
+            </button>
+
+            <div class="accordion-body" id="body-password">
+              <div class="module-content-grid">
+                
+                <!-- Educational Text & Defense Rules -->
+                <div class="module-guide-content">
+                  <h4>Entropy Trumps Arbitrary Complexity</h4>
+                  <p>
+                    Traditional rules forcing <code>P@ssw0rd1!</code> are fundamentally broken—adversaries use automated dictionary substitution tables that crack them in milliseconds. What truly protects accounts is <strong>Length &amp; Unpredictability (Information Entropy)</strong>.
+                  </p>
+
+                  <ul class="defense-checklist">
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Adopt 4-Word Passphrases:</strong> A phrase like <code>correct-horse-battery-staple</code> contains ~55 bits of entropy, taking centuries to brute force, while remaining easy to remember.</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Use a Dedicated Password Manager:</strong> Bitwarden, 1Password, or KeePass generate unique 20+ character passwords for every website so one compromised site never affects others.</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Upgrade MFA from SMS to Hardware / Authenticator:</strong> SMS is vulnerable to SIM-swapping. Use Authenticator apps (TOTP) or hardware security keys (FIDO2 / YubiKey / WebAuthn).</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Check for Compromised Credentials:</strong> Periodically review services like Have I Been Pwned to see if past breach databases contain your email.</span>
+                    </li>
+                  </ul>
+
+                  <div style="margin-top: 1.25rem;">
+                    <button type="button" class="btn btn-secondary btn-sm" data-tab="quizzes" data-quiz-module="passwords">
+                      <i class="fa-solid fa-vial-circle-check"></i> Practice Passwords Quiz
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Interactive Password Strength & Entropy Analyzer -->
+                <div class="interactive-tool-pane">
+                  <div class="tool-header">
+                    <span class="tool-title"><i class="fa-solid fa-calculator"></i> Real-Time Entropy Analyzer</span>
+                    <span style="font-size: 0.75rem; color: var(--emerald-primary);">100% Client-Side Private</span>
+                  </div>
+
+                  <div class="password-tool-box">
+                    <div class="password-input-wrap">
+                      <input type="password" id="passwordAnalyzerInput" placeholder="Type a test password or passphrase..." value="SolarBreeze2026!" autocomplete="off" spellcheck="false" aria-label="Test password input">
+                      <button type="button" class="toggle-password-vis" id="togglePasswordVis" aria-label="Toggle password visibility">
+                        <i class="fa-solid fa-eye" id="eyeIcon"></i>
+                      </button>
+                    </div>
+
+                    <div class="strength-meter-wrap">
+                      <div class="strength-meter-bar">
+                        <div class="strength-meter-fill" id="strengthBarFill"></div>
+                      </div>
+                      <div class="strength-labels">
+                        <span id="strengthTextLabel" style="font-weight: 700;">Evaluating...</span>
+                        <span id="charCountLabel" class="tabular-nums">16 chars</span>
+                      </div>
+                    </div>
+
+                    <div class="entropy-stats-grid">
+                      <div class="entropy-card">
+                        <div class="entropy-card-title">Estimated Entropy</div>
+                        <div class="entropy-card-val" id="entropyBitsVal">58 bits</div>
+                      </div>
+                      <div class="entropy-card">
+                        <div class="entropy-card-title">Offline Crack Time</div>
+                        <div class="entropy-card-val" id="crackTimeVal">3.4 Years</div>
+                      </div>
+                    </div>
+
+                    <div style="font-size: 0.8rem; color: var(--text-dim); line-height: 1.5;" id="entropyGuidanceBox">
+                      Tip: Replacing special symbol substitutions with 4 random dictionary words creates higher entropy that is easier to remember.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- -------------------------------------------------------------
+               PILLAR 3: Safe Browsing & Wi-Fi Defense
+               ------------------------------------------------------------- -->
+          <article class="accordion-item" id="module-browsing">
+            <button type="button" class="accordion-header" aria-expanded="false" aria-controls="body-browsing">
+              <div class="accordion-title-wrap">
+                <div class="accordion-icon-badge">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="accordion-text">
+                  <h3>Pillar 3: Safe Browsing, HTTPS &amp; Network Defense</h3>
+                  <div class="accordion-metadata">
+                    <span>Public Wi-Fi, VPNs &amp; Trackers</span>
+                    <span>·</span>
+                    <span>12 Min Practical Guide</span>
+                    <span>·</span>
+                    <span>Live Packet Inspection Simulator</span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-controls">
+                <button type="button" class="complete-checkbox-btn" data-module-id="3">
+                  <i class="fa-regular fa-circle-check"></i> Mark Completed
+                </button>
+                <i class="fa-solid fa-chevron-down accordion-chevron"></i>
+              </div>
+            </button>
+
+            <div class="accordion-body" id="body-browsing">
+              <div class="module-content-grid">
+                
+                <!-- Educational Text & Defense Rules -->
+                <div class="module-guide-content">
+                  <h4>Securing Your Connection in the Wild</h4>
+                  <p>
+                    Connecting to public coffee shop, airport, or hotel Wi-Fi exposes network packets to eavesdropping adversaries using tools like Wireshark and rogue "Evil Twin" access points.
+                  </p>
+
+                  <ul class="defense-checklist">
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Verify HTTPS Everywhere:</strong> Look for the padlock and <code>https://</code> prefix. Modern TLS 1.3 ensures traffic between your browser and the web server is encrypted against on-path snooping.</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Use a Reputable VPN on Public Networks:</strong> A Virtual Private Network establishes an encrypted tunnel, protecting local Wi-Fi sniffers from seeing your destination IPs and unencrypted DNS requests.</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Disable Automatic Wi-Fi Reconnection:</strong> Turn off "Connect automatically to open networks" on smartphones and laptops to prevent automatic association with evil twin spoofed SSIDs.</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check"></i>
+                      <span><strong>Browser Fingerprint &amp; Tracker Blocking:</strong> Utilize content blockers (e.g. uBlock Origin) and privacy browsers (e.g. Brave, Firefox with strict protection) to minimize cross-site behavioral tracking.</span>
+                    </li>
+                  </ul>
+
+                  <div style="margin-top: 1.25rem;">
+                    <button type="button" class="btn btn-secondary btn-sm" data-tab="quizzes" data-quiz-module="browsing">
+                      <i class="fa-solid fa-vial-circle-check"></i> Practice Safe Browsing Quiz
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Interactive Safe Browsing & Wi-Fi Packet Simulator -->
+                <div class="interactive-tool-pane">
+                  <div class="tool-header">
+                    <span class="tool-title"><i class="fa-solid fa-tower-broadcast"></i> Network Sniffing Comparison</span>
+                    <span style="font-size: 0.75rem; color: var(--cyan-primary);">Simulated Packet Stream</span>
+                  </div>
+
+                  <div class="wifi-sim-box">
+                    <div class="wifi-toggle-strip">
+                      <button type="button" class="wifi-toggle-btn active" id="btnWifiUnsecured" data-mode="unsecured">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Open Public Wi-Fi
+                      </button>
+                      <button type="button" class="wifi-toggle-btn" id="btnWifiSecured" data-mode="secured">
+                        <i class="fa-solid fa-shield-halved"></i> WireGuard VPN Tunnel
+                      </button>
+                    </div>
+
+                    <div class="packet-stream-display" id="packetStreamDisplay" aria-live="polite">
+                      <!-- Populated via script.js -->
+                    </div>
+
+                    <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;" id="wifiModeExplanation">
+                      Toggle between modes to observe what an attacker on the same Wi-Fi router intercepting packets can see in real-time.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 4: QUIZZES (Interactive Knowledge Assessment)
+         ====================================================================== -->
+    <section id="quizzes-tab" class="tab-content" role="tabpanel" aria-labelledby="tab-quizzes">
+      <div class="container quiz-section">
+        
+        <div class="section-intro">
+          <span class="section-kicker">Knowledge Verification</span>
+          <h2 class="section-title">Cyber Defense Readiness Quiz</h2>
+          <p class="section-desc">
+            Test your security reflexes with real-world scenarios. Choose a specific module to focus your study or take the comprehensive assessment.
+          </p>
+        </div>
+
+        <div class="quiz-container-card">
+
+          <!-- Module Filter Selector -->
+          <div class="quiz-module-selector-wrap">
+            <div class="quiz-module-header-row">
+              <div class="quiz-module-label">
+                <i class="fa-solid fa-filter"></i> Focus by Learning Module:
+              </div>
+              <div class="quiz-active-module-tag" id="quizActiveModuleTag">
+                <i class="fa-solid fa-layer-group"></i> Module: All Topics
+              </div>
+            </div>
+            <div class="quiz-module-chips" id="quizModuleChips">
+              <button type="button" class="quiz-chip-btn active" data-quiz-module="all">
+                <i class="fa-solid fa-layer-group"></i> All Topics <span class="chip-count" id="countAll">16</span>
+              </button>
+              <button type="button" class="quiz-chip-btn" data-quiz-module="phishing">
+                <i class="fa-solid fa-envelope-open-text"></i> Phishing &amp; Deception <span class="chip-count" id="countPhishing">4</span>
+              </button>
+              <button type="button" class="quiz-chip-btn" data-quiz-module="passwords">
+                <i class="fa-solid fa-key"></i> Passwords &amp; MFA <span class="chip-count" id="countPasswords">4</span>
+              </button>
+              <button type="button" class="quiz-chip-btn" data-quiz-module="browsing">
+                <i class="fa-solid fa-globe"></i> Safe Browsing &amp; Wi-Fi <span class="chip-count" id="countBrowsing">4</span>
+              </button>
+              <button type="button" class="quiz-chip-btn" data-quiz-module="threats">
+                <i class="fa-solid fa-shield-virus"></i> Ransomware &amp; Zero-Days <span class="chip-count" id="countThreats">4</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Module Context Info Banner -->
+          <div class="quiz-module-info-banner" id="quizModuleInfoBanner">
+            <div class="quiz-banner-text">
+              <strong id="quizBannerTitle">Comprehensive Security Assessment</strong>
+              <div class="quiz-banner-desc" id="quizBannerDesc">
+                Covering real-world spear phishing, passphrase entropy, hardware keys, network sniffing, and zero-day containment.
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quiz Active Question View -->
+          <div id="quizActiveView">
+            <div class="quiz-header-bar">
+              <span class="quiz-counter" id="quizQuestionCounter">Question 1 of 16</span>
+              <span class="quiz-score-badge">Score: <strong id="quizScoreText" class="tabular-nums">0</strong> pts</span>
+            </div>
+
+            <div class="quiz-progress-track">
+              <div class="quiz-progress-bar-fill" id="quizProgressBarFill"></div>
+            </div>
+
+            <h3 class="quiz-question-title" id="quizQuestionText">
+              Loading scenario...
+            </h3>
+
+            <div class="quiz-options-list" id="quizOptionsList">
+              <!-- Rendered via JS -->
+            </div>
+
+            <!-- Instant Explanation Callout Box -->
+            <div class="quiz-explanation-box" id="quizExplanationBox">
+              <div class="quiz-exp-title" id="quizExpTitle">
+                <i class="fa-solid fa-circle-check"></i> Correct Response
+              </div>
+              <p class="quiz-exp-text" id="quizExpText">
+                Explanation text goes here.
+              </p>
+            </div>
+
+            <div class="quiz-actions-row">
+              <button type="button" class="btn btn-primary" id="quizNextBtn" style="display: none;">
+                Next Question <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quiz Completion Results Screen -->
+          <div class="quiz-results-screen" id="quizResultsScreen">
+            <div class="result-badge-icon" id="resultBadgeIcon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="result-badge-rank" id="resultBadgeRank">Cyber Sentinel</div>
+            <div class="result-score-stat" id="resultScoreStat">You scored 16 / 16 (100%)</div>
+            <p class="result-feedback-text" id="resultFeedbackText">
+              Outstanding work! You demonstrate exemplary security awareness across phishing detection, credential hygiene, and network defense.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary" id="quizRetakeBtn">
+                <i class="fa-solid fa-rotate-right"></i> Retake This Module
+              </button>
+              <button type="button" class="btn btn-secondary" id="quizAllModulesBtn" data-quiz-module="all">
+                <i class="fa-solid fa-layer-group"></i> Take Comprehensive Quiz
+              </button>
+              <button type="button" class="btn btn-secondary" data-tab="services">
+                <i class="fa-solid fa-graduation-cap"></i> Review Learning Hub
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 5: CONTACT (Inquiries & Incident Triage)
+         ====================================================================== -->
+    <section id="contact-tab" class="tab-content" role="tabpanel" aria-labelledby="tab-contact">
+      <div class="container contact-section">
+        
+        <div class="section-intro">
+          <span class="section-kicker">Emergency Help &amp; Collaboration</span>
+          <h2 class="section-title">Contact &amp; Incident Triage</h2>
+          <p class="section-desc">
+            Have questions for the team, wish to submit a threat report, or suspect your personal device is compromised? Use the resources below.
+          </p>
+        </div>
+
+        <div class="contact-layout-grid">
+          
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-main);">
+              <i class="fa-solid fa-paper-plane" style="color: var(--cyan-primary); margin-right: 0.5rem;"></i> Send a Secure Inquiry
+            </h3>
+            <p style="font-size: 0.9rem; margin-bottom: 1.75rem;">
+              Reach our research and education team. We respond to verified educational and media inquiries within 24 hours.
+            </p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="contactName">Full Name</label>
+                <input type="text" id="contactName" name="name" placeholder="e.g. Alex Morgan" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" name="email" placeholder="name@domain.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Inquiry Category</label>
+                <select id="contactSubject" name="subject" required>
+                  <option value="">Select a category...</option>
+                  <option value="general">General Educational Question</option>
+                  <option value="threat">Threat / Scam Report Submission</option>
+                  <option value="school">School / University Workshop Request</option>
+                  <option value="partnership">Nonprofit / Open Source Partnership</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message Details</label>
+                <textarea id="contactMessage" name="message" placeholder="Provide details regarding your inquiry or threat report..." required></textarea>
+                <div class="form-note">Do NOT send sensitive credentials, private keys, or passwords.</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="contactSubmitBtn" style="width: 100%;">
+                <i class="fa-solid fa-lock"></i> Submit Encrypted Inquiry
+              </button>
+
+              <div class="form-feedback-alert" id="contactFormFeedback">
+                <!-- Dynamically populated -->
+              </div>
+            </form>
+          </div>
+
+          <!-- Incident Triage & Emergency Hotlines Column -->
+          <div class="incident-triage-card">
+            
+            <!-- Immediate Triage Checklist -->
+            <div class="triage-box">
+              <div class="triage-header">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Suspect You've Been Hacked?</span>
+              </div>
+              <p class="triage-desc">
+                Follow this critical 5-step containment protocol immediately if you notice strange logins or ransom notes:
+              </p>
+              <ol class="triage-steps">
+                <li class="triage-step-item">
+                  <span class="triage-num">01.</span>
+                  <span><strong>Disconnect Immediately:</strong> Disconnect Wi-Fi, Ethernet, and Bluetooth to prevent lateral propagation.</span>
+                </li>
+                <li class="triage-step-item">
+                  <span class="triage-num">02.</span>
+                  <span><strong>Reset Master Passwords:</strong> Using a separate, clean device (e.g. mobile phone on 5G), change email and bank passwords.</span>
+                </li>
+                <li class="triage-step-item">
+                  <span class="triage-num">03.</span>
+                  <span><strong>Terminate Active Sessions:</strong> Use "Log out of all devices" in Google, Apple, and Microsoft security settings.</span>
+                </li>
+                <li class="triage-step-item">
+                  <span class="triage-num">04.</span>
+                  <span><strong>Freeze Credit &amp; Alert Banks:</strong> Contact your financial institutions if banking logins or SSN were exposed.</span>
+                </li>
+                <li class="triage-step-item">
+                  <span class="triage-num">05.</span>
+                  <span><strong>File Official Incident Report:</strong> Submit official reports to local cyber authorities below.</span>
+                </li>
+              </ol>
+            </div>
+
+            <!-- Official Emergency Reporting Hotlines -->
+            <div class="hotline-card">
+              <div class="hotline-title">
+                <i class="fa-solid fa-building-shield"></i> Official Emergency Reporting
+              </div>
+              <div class="hotline-list">
+                <div class="hotline-item">
+                  <div>
+                    <div class="hotline-name">FBI Internet Crime Complaint Center</div>
+                    <div style="font-size: 0.75rem; color: var(--text-dim);">Federal Cybercrime &amp; Fraud (US)</div>
+                  </div>
+                  <a href="https://www.ic3.gov" target="_blank" rel="noopener noreferrer" class="hotline-link">
+                    ic3.gov <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+
+                <div class="hotline-item">
+                  <div>
+                    <div class="hotline-name">CISA Incident Reporting</div>
+                    <div style="font-size: 0.75rem; color: var(--text-dim);">Critical Infrastructure &amp; Malware</div>
+                  </div>
+                  <a href="https://www.cisa.gov/report" target="_blank" rel="noopener noreferrer" class="hotline-link">
+                    cisa.gov <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+
+                <div class="hotline-item">
+                  <div>
+                    <div class="hotline-name">FTC Identity Theft Portal</div>
+                    <div style="font-size: 0.75rem; color: var(--text-dim);">Recovery Plans &amp; Credit Bureaus</div>
+                  </div>
+                  <a href="https://www.identitytheft.gov" target="_blank" rel="noopener noreferrer" class="hotline-link">
+                    identitytheft.gov <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+
+                <div class="hotline-item">
+                  <div>
+                    <div class="hotline-name">Europol EC3</div>
+                    <div style="font-size: 0.75rem; color: var(--text-dim);">European Cybercrime Centre</div>
+                  </div>
+                  <a href="https://www.europol.europa.eu" target="_blank" rel="noopener noreferrer" class="hotline-link">
+                    europol.eu <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Frequently Asked Questions -->
+        <div class="faq-section">
+          <div class="section-intro" style="margin-bottom: 2rem;">
+            <span class="section-kicker">Common Inquiries</span>
+            <h3 class="section-title" style="font-size: 1.85rem;">Frequently Asked Questions</h3>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-card">
+              <div class="faq-q">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Can an attacker hack my computer just by opening an email?</span>
+              </div>
+              <p class="faq-a">
+                In modern updated email clients (Gmail, Outlook, Apple Mail), merely viewing standard text emails is extremely safe. Infection typically requires downloading/opening malicious attachments (e.g. <code>.exe</code>, <code>.scr</code>, macro-enabled <code>.docx</code>) or clicking links to fraudulent login sites.
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-q">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Is a paid antivirus still necessary if I run Windows Defender?</span>
+              </div>
+              <p class="faq-a">
+                Built-in Windows Defender and macOS XProtect combined with prudent browser habits, automatic OS updates, and a password manager provide sufficient baseline protection for 99% of general consumers today.
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-q">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Why is SMS Two-Factor Authentication discouraged?</span>
+              </div>
+              <p class="faq-a">
+                SMS messages travel unencrypted over telecom networks and are susceptible to SIM-swapping attacks where a criminal tricks a mobile carrier into porting your phone number. Hardware keys (YubiKey) or TOTP apps (Google Authenticator, Aegis) are far safer.
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-q">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Should I ever pay a ransomware demand?</span>
+              </div>
+              <p class="faq-a">
+                Both CISA and the FBI strongly discourage paying ransoms. Payment does not guarantee decryption key delivery, funds criminal syndicates, and often flags your organization as an easy repeat target.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-brand-col">
+          <div class="brand">
+            <div class="brand-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="brand-text">Cyber<span>Shield</span></div>
+          </div>
+          <p>
+            An open educational platform dedicated to building everyday cyber resilience through interactive simulations and practical threat defense.
+          </p>
+        </div>
+
+        <!-- Quick Tabs Navigation -->
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-nav-list">
+            <li><a data-tab="home">Home Overview</a></li>
+            <li><a data-tab="about">About Cyber Shield</a></li>
+            <li><a data-tab="services">Defensive Pillars</a></li>
+            <li><a data-tab="quizzes">Knowledge Assessment</a></li>
+            <li><a data-tab="contact">Incident Help &amp; Triage</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <div class="footer-col-title">Security Resources</div>
+          <ul class="footer-nav-list">
+            <li><a href="https://www.cisa.gov" target="_blank" rel="noopener noreferrer">CISA Best Practices</a></li>
+            <li><a href="https://haveibeenpwned.com" target="_blank" rel="noopener noreferrer">Have I Been Pwned</a></li>
+            <li><a href="https://www.ic3.gov" target="_blank" rel="noopener noreferrer">FBI IC3 Reporting</a></li>
+            <li><a href="https://www.eff.org" target="_blank" rel="noopener noreferrer">EFF Surveillance Defense</a></li>
+          </ul>
+        </div>
+
+        <!-- Threat Bulletin Signup -->
+        <div>
+          <div class="footer-col-title">Threat Intel Bulletin</div>
+          <div class="footer-newsletter-wrap">
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" placeholder="Enter your email" required aria-label="Email for threat bulletin">
+              <button type="submit" class="btn btn-emerald btn-sm">Join</button>
+            </form>
+            <div class="newsletter-note">Zero spam. Monthly plain-English security alerts.</div>
+            <div id="newsletterSuccess" style="display: none; font-size: 0.8rem; color: var(--emerald-primary);">
+              <i class="fa-solid fa-check"></i> Subscribed to advisory alerts!
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-disclaimer">
+          &copy; 2026 Cyber Shield Educational Initiative. Open access under Creative Commons Attribution 4.0. Not affiliated with government agencies. For active criminal breaches, always contact your local law enforcement.
+        </div>
+        <div>
+          <span>Privacy by Design · Zero Tracking</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script type="module" src="/script.js"></script>
+</body>
+</html>
