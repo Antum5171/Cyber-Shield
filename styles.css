@@ -989,6 +989,12 @@ a {
   justify-content: space-between;
   gap: 1.5rem;
   text-align: left;
+  user-select: none;
+  transition: background var(--transition-fast);
+}
+
+.accordion-header:hover {
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .accordion-title-wrap {
@@ -1039,7 +1045,47 @@ a {
 .accordion-controls {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.accordion-toggle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.95rem;
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.35);
+  border-radius: var(--radius-sm);
+  color: var(--cyan-primary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.08);
+  pointer-events: none;
+}
+
+.accordion-header:hover .accordion-toggle-badge {
+  background: rgba(0, 242, 254, 0.18);
+  border-color: var(--cyan-primary);
+  box-shadow: 0 0 14px rgba(0, 242, 254, 0.28);
+  transform: translateY(-1px);
+}
+
+.accordion-item.open .accordion-toggle-badge {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--border-subtle);
+  color: var(--text-muted);
+  box-shadow: none;
+}
+
+.accordion-item.open .accordion-header:hover .accordion-toggle-badge {
+  border-color: var(--cyan-primary);
+  color: var(--cyan-primary);
+  background: rgba(0, 242, 254, 0.1);
 }
 
 .complete-checkbox-btn {
@@ -1068,14 +1114,14 @@ a {
 }
 
 .accordion-chevron {
-  color: var(--text-muted);
-  font-size: 1.1rem;
+  color: var(--cyan-primary);
+  font-size: 0.85rem;
   transition: transform var(--transition-normal);
 }
 
 .accordion-item.open .accordion-chevron {
   transform: rotate(180deg);
-  color: var(--cyan-primary);
+  color: var(--text-muted);
 }
 
 .accordion-body {

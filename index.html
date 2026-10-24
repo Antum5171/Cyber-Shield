@@ -419,6 +419,9 @@
             <input type="text" id="moduleSearchInput" placeholder="Filter topics (e.g. MFA, spoofing, VPN, entropy)..." aria-label="Search learning modules">
           </div>
           <div class="hub-progress-tracker">
+            <button type="button" class="btn btn-secondary btn-sm" id="btnToggleAllAccordions">
+              <i class="fa-solid fa-arrows-up-down"></i> <span id="toggleAllText">Expand All</span>
+            </button>
             <div class="hub-progress-info">
               Completion: <strong id="modulesCompletedText">0 of 3</strong>
             </div>
@@ -434,8 +437,8 @@
           <!-- -------------------------------------------------------------
                PILLAR 1: Phishing Awareness
                ------------------------------------------------------------- -->
-          <article class="accordion-item open" id="module-phishing">
-            <button type="button" class="accordion-header" aria-expanded="true" aria-controls="body-phishing">
+          <article class="accordion-item" id="module-phishing">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-phishing">
               <div class="accordion-title-wrap">
                 <div class="accordion-icon-badge">
                   <i class="fa-solid fa-envelope-open-text"></i>
@@ -455,9 +458,12 @@
                 <button type="button" class="complete-checkbox-btn" data-module-id="1">
                   <i class="fa-regular fa-circle-check"></i> Mark Completed
                 </button>
-                <i class="fa-solid fa-chevron-down accordion-chevron"></i>
+                <div class="accordion-toggle-badge">
+                  <span class="toggle-action-text">View Info</span>
+                  <i class="fa-solid fa-chevron-down accordion-chevron"></i>
+                </div>
               </div>
-            </button>
+            </div>
 
             <div class="accordion-body" id="body-phishing">
               <div class="module-content-grid">
@@ -546,7 +552,7 @@
                PILLAR 2: Password Hygiene & Multi-Factor Auth
                ------------------------------------------------------------- -->
           <article class="accordion-item" id="module-password">
-            <button type="button" class="accordion-header" aria-expanded="false" aria-controls="body-password">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-password">
               <div class="accordion-title-wrap">
                 <div class="accordion-icon-badge">
                   <i class="fa-solid fa-key"></i>
@@ -566,9 +572,12 @@
                 <button type="button" class="complete-checkbox-btn" data-module-id="2">
                   <i class="fa-regular fa-circle-check"></i> Mark Completed
                 </button>
-                <i class="fa-solid fa-chevron-down accordion-chevron"></i>
+                <div class="accordion-toggle-badge">
+                  <span class="toggle-action-text">View Info</span>
+                  <i class="fa-solid fa-chevron-down accordion-chevron"></i>
+                </div>
               </div>
-            </button>
+            </div>
 
             <div class="accordion-body" id="body-password">
               <div class="module-content-grid">
@@ -656,7 +665,7 @@
                PILLAR 3: Safe Browsing & Wi-Fi Defense
                ------------------------------------------------------------- -->
           <article class="accordion-item" id="module-browsing">
-            <button type="button" class="accordion-header" aria-expanded="false" aria-controls="body-browsing">
+            <div class="accordion-header" role="button" tabindex="0" aria-expanded="false" aria-controls="body-browsing">
               <div class="accordion-title-wrap">
                 <div class="accordion-icon-badge">
                   <i class="fa-solid fa-globe"></i>
@@ -676,9 +685,12 @@
                 <button type="button" class="complete-checkbox-btn" data-module-id="3">
                   <i class="fa-regular fa-circle-check"></i> Mark Completed
                 </button>
-                <i class="fa-solid fa-chevron-down accordion-chevron"></i>
+                <div class="accordion-toggle-badge">
+                  <span class="toggle-action-text">View Info</span>
+                  <i class="fa-solid fa-chevron-down accordion-chevron"></i>
+                </div>
               </div>
-            </button>
+            </div>
 
             <div class="accordion-body" id="body-browsing">
               <div class="module-content-grid">

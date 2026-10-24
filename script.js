@@ -68,10 +68,18 @@ function initTabNavigation() {
       setTimeout(() => {
         const accordionItem = document.getElementById(targetAccordionId);
         if (accordionItem) {
-          document.querySelectorAll('.accordion-item').forEach(item => item.classList.remove('open'));
+          document.querySelectorAll('.accordion-item').forEach(item => {
+            item.classList.remove('open');
+            const h = item.querySelector('.accordion-header');
+            if (h) h.setAttribute('aria-expanded', 'false');
+            const txt = item.querySelector('.toggle-action-text');
+            if (txt) txt.textContent = 'View Info';
+          });
           accordionItem.classList.add('open');
           const header = accordionItem.querySelector('.accordion-header');
           if (header) header.setAttribute('aria-expanded', 'true');
+          const actionText = accordionItem.querySelector('.toggle-action-text');
+          if (actionText) actionText.textContent = 'Hide Info';
           accordionItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }, 150);
@@ -305,25 +313,71 @@ function initLearningHub() {
   const progressText = document.getElementById('modulesCompletedText');
   const progressFill = document.getElementById('hubProgressFill');
 
-  // Accordion Toggle
+  // Accordion Independent Toggle
   accordionItems.forEach(item => {
     const header = item.querySelector('.accordion-header');
-    header.addEventListener('click', (e) => {
-      // Don't toggle accordion if click was on completion button
-      if (e.target.closest('.complete-checkbox-btn')) return;
+    if (!header) return;
 
+    function toggleItem() {
       const isOpen = item.classList.contains('open');
-      accordionItems.forEach(other => {
-        other.classList.remove('open');
-        other.querySelector('.accordion-header')?.setAttribute('aria-expanded', 'false');
-      });
-
-      if (!isOpen) {
+      const actionText = item.querySelector('.toggle-action-text');
+      if (isOpen) {
+        item.classList.remove('open');
+        header.setAttribute('aria-expanded', 'false');
+        if (actionText) actionText.textContent = 'View Info';
+      } else {
         item.classList.add('open');
         header.setAttribute('aria-expanded', 'true');
+        if (actionText) actionText.textContent = 'Hide Info';
+      }
+      updateToggleAllBtnState();
+    }
+
+    header.addEventListener('click', (e) => {
+      // Don't toggle if click was on completion button or an inner button
+      if (e.target.closest('.complete-checkbox-btn') || e.target.closest('button')) return;
+      toggleItem();
+    });
+
+    header.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.closest('.complete-checkbox-btn') || e.target.closest('button')) return;
+        e.preventDefault();
+        toggleItem();
       }
     });
   });
+
+  // Expand / Collapse All Toggle
+  const toggleAllBtn = document.getElementById('btnToggleAllAccordions');
+  const toggleAllText = document.getElementById('toggleAllText');
+
+  function updateToggleAllBtnState() {
+    const anyClosed = Array.from(accordionItems).some(item => !item.classList.contains('open'));
+    if (toggleAllText) {
+      toggleAllText.textContent = anyClosed ? 'Expand All' : 'Collapse All';
+    }
+  }
+
+  if (toggleAllBtn) {
+    toggleAllBtn.addEventListener('click', () => {
+      const anyClosed = Array.from(accordionItems).some(item => !item.classList.contains('open'));
+      accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        const actionText = item.querySelector('.toggle-action-text');
+        if (anyClosed) {
+          item.classList.add('open');
+          header?.setAttribute('aria-expanded', 'true');
+          if (actionText) actionText.textContent = 'Hide Info';
+        } else {
+          item.classList.remove('open');
+          header?.setAttribute('aria-expanded', 'false');
+          if (actionText) actionText.textContent = 'View Info';
+        }
+      });
+      updateToggleAllBtnState();
+    });
+  }
 
   // Module Completion Tracker
   const completedModules = new Set();
